@@ -1,0 +1,67 @@
+.BOX {
+border: 2px solid #484848;
+}
+
+.TEXT {
+    font-size: 14px;
+    padding: 2px;
+    font-family: Georgia,serif;
+    line-height: 18px;
+}
+
+.HEADER {
+    font-size: 22px;
+    padding: 2px;
+    font-family: Georgia,serif;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+.TEXTBOX {
+    font-size: 14px;
+    padding: 2px;
+    font-family: Georgia,serif;
+    line-height: 18px;
+    border: 2px solid #484848;
+}
+
+.LINK {
+    color: #1111EF;
+    font-size: 14px;
+    padding: 2px;
+    font-family: Georgia,serif;
+}
+
+.BUTTON {
+    display: block;
+    font-family: Georgia,serif;
+}
+
+.INPUT {
+    display: block;
+    background-color: #F5F0F5;
+}
+
+.TEXTAREA {
+    display: block;
+    margin: 0px;
+    background-color: #F5F0F5;
+}
+
+/*RADIO*/
+/*CHECKBOX*/
+/*SELECT*/
+
+.HLINE {
+    border-top: 2px solid #484848;
+    margin-top: 5px;
+}
+
+./*VLINE {
+    border-left: 2px solid #484848;
+    margin-left: 5px;
+}*/
+
+.IMAGE {
+    border: none;
+}

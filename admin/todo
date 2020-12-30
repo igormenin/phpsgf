@@ -1,0 +1,46 @@
+Script de monitoramento em tempo real das filas.
+
+select count(senhas.id_senha),servico.des_descricao, DATE_FORMAT(NOW(),'%d/%m/%Y %H:%i:%s') as DataHora from senhas
+left join servico on servico.id_servico=senhas.id_servico
+where DATE_FORMAT(senhas.dat_gerada,'%d/%m/%Y')=DATE_FORMAT(NOW(),'%d/%m/%Y')
+and senhas.id_senha NOT IN (SELECT senhaschamadas.id_senha from senhaschamadas WHERE senhaschamadas.id_senha IS NOT NULL)
+GROUP BY senhas.id_servico ASC;
+
+--> Script melhorado mostrando a senha mais antiga que ainda não foi chamado.
+select count(ss.id_senha),
+       servico.des_descricao,
+       (SELECT CONCAT(se.num_sequencia,' - ', DATE_FORMAT(se.dat_gerada,'%d/%m/%Y %T')) as dtgerada FROM senhas as se where se.id_servico=ss.id_servico and se.id_senha NOT IN (SELECT senhaschamadas.id_senha from senhaschamadas WHERE senhaschamadas.id_senha IS NOT NULL) and DATE_FORMAT(se.dat_gerada,'%d/%m/%Y')=DATE_FORMAT(NOW(),'%d/%m/%Y') order by se.id_senha asc LIMIT 1) as "Senha + Antiga",
+       DATE_FORMAT(NOW(),'%d/%m/%Y %T') as DataHora
+from senhas as ss
+left join servico on servico.id_servico=ss.id_servico
+where DATE_FORMAT(ss.dat_gerada,'%d/%m/%Y')=DATE_FORMAT(NOW(),'%d/%m/%Y')
+and ss.id_senha NOT IN (SELECT senhaschamadas.id_senha from senhaschamadas WHERE senhaschamadas.id_senha IS NOT NULL)
+GROUP BY ss.id_servico ASC;
+
+
+
+
+------
+
+Script de totalizador de atenimentos
+
+select servico.des_descricao as Fila, count(senhas.id_senha) as Total from senhas
+left join servico on servico.id_servico=senhas.id_servico
+where senhas.id_senha>=13357
+GROUP BY Total ASC;
+
+
+---- 
+BLOQUEIO DE HORAS
+
+INSERT INTO `servicohora` (`diasemana`, `horainicio`, `horafim`, `id_servico`)
+VALUES ('Seg', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '5'),
+('Ter', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '5'),
+('Qua', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '5'),
+('Qui', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '5'),
+('Sex', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '5'),
+('Seg', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '6'),
+('Ter', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '6'),
+('Qua', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '6'),
+('Qui', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '6'),
+('Sex', '2020-01-23 07:30:00', '2020-01-23 16:59:00', '6');

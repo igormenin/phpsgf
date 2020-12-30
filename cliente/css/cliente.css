@@ -1,0 +1,148 @@
+body{
+    background-color: #ede9e3;
+    overflow: hidden;
+}
+
+.container  {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+}
+
+.contents  {
+    /*margin-bottom: 20%;*/
+    text-align: center;
+    right: 0px;
+
+    position: relative;
+    width: 95%;
+    display: block;
+}
+
+.h1{
+    font-size: 35px;
+    color: red;
+}
+h2{
+    margin: 5px;
+    font-size: 20px;
+    color: red;
+}
+
+/* .imgcentro{
+    width: 100px;
+    height: 100px;
+    align-content: center;
+} */
+
+.contents h3{
+    margin-top: 2px;
+    font-family: arial;
+    font-size: 12px;
+    color: black;
+    border-bottom: solid 1px #000000;
+}
+.h3{
+    margin-top: 2px;
+    font-family: arial;
+    color: black;
+}
+
+
+.divButtons{
+    width: 95%;
+    text-align:center;
+    position: fixed;
+    height: 165px;
+    bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.divButtons button{
+    margin: 2px;
+}
+
+.divSair{
+    width: 95%;
+    text-align:center;
+    position: fixed;
+    height: 40px;
+    bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.senhas{
+    /*margin-bottom: 10%;*/
+    text-align: center;
+    position: relative;
+    width: 95%;
+    height: 200px;
+    display: block;
+    border-top: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+}
+
+/*Campo do tipo da senha chamada*/
+.senhas h4{
+    margin: 0;
+    font-family: arial;
+    color: Red;
+}
+
+.senhas h6{
+    margin: 0;
+}
+
+/*Campo do numero da senha chamada*/
+.senhas h3{
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    font-style: italic;
+    /*padding-top: -200px;*/
+    color: #000000;
+    margin: 0;
+    /*position: absolute;*/
+}
+/*Campo do numero da senha chamada*/
+.senhas h2{
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    font-style: italic;
+    /*padding-top: -200px;*/
+    color: #000000;
+    margin: 0;
+    /*position: absolute;*/
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline;
+    /*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: -1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

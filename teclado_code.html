@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Teclado</title>
+</head>
+<body onkeyup="eventkeyup(event)">
+Aperte a tecla para descobrir o código da mesma!
+<br><br>
+<a id="senha3" class="senhas_antigas"></a><br>
+
+<script>
+    function eventkeyup(event) {
+        var x = event.keyCode;
+
+        var exibe = document.getElementById("senha3");
+        exibe.innerHTML = "Tecla: " + String.fromCharCode(x) + " --> " + x;
+
+        // console.log("===================================");
+        // console.log("Tecla: " + String.fromCharCode(x) + " --> " + x);
+        // console.log("===================================");
+        window.focus();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[pt_BR]=mate-network-properties
+Exec=/home/sms/Documentos/.CliSenha/abreclisenha.sh
+Name[pt_BR]=Cliente Senha
+Name=Cliente_Senha
+Icon=/home/sms/Documentos/.CliSenha/icone_clisenha.png
+GenericName[pt_BR]=Inicia Aplicativo Cliente de Gerenciamento de Senhas.
+Comment[pt_BR]=Inicia Aplicativo Cliente de Gerenciamento de Senhas.

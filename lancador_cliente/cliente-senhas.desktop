@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cliente Senhas
+Comment=
+Exec="/home/sms/Desktop/.cliente-senhas.bash"
+Icon=avatar-default
+Path=
+Terminal=false
+StartupNotify=false
