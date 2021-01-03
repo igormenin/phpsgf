@@ -4,13 +4,24 @@ Sistema de Gerenciamento de Filas de Atendimento
 [![GitHub license](https://img.shields.io/github/license/igormenin/phpsgf)](https://github.com/igormenin/phpsgf/blob/main/LICENSE)
 ![GitHub Status](https://img.shields.io/badge/Status-Production-brightgreen)
 
+## Implantação:
+- Secretaria Municipal de Saúde do Município de Jaraguá do Sul - SC
+Locais implantados na SEMSA:
+-- Centro Vida - Centro de Especialidades Médicas Dr. João Biron
+-- Farmácia Básica
+-- Laboratório Municipal
+
 ## Tecnologias Usadas:
 - PHP
 - MariaDB
 - Javascript
 - jQuery
 
-## Captura de Telas
+### Descritivo Básico:
+  Aplicação foi desenvolvida inicialmente pensando em substituir os paineis que eram adquiridos de fornecedores
+
+
+### Captura de Telas
 ![Painel de Chamada](https://i.ibb.co/xCSYYxs/Captura-de-tela-de-srvsenhapoliclinica-0-s-2021-01-03-10-46-37.png "Painel de Chamada")
 ![Painel Administrativo - Login](https://i.ibb.co/kBGYTX6/Tela-Captura-Painel-Adm-Login.png "painel administrativo - Login")
 ![Painel Administrativo - Tela Inicial](https://i.ibb.co/6gvrr5P/Tela-Captura-Painel-Adm-Tela-Inicial.png "painel administrativo - Tela Inicial")
